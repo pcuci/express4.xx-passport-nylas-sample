@@ -1,15 +1,16 @@
 {
   "name": "nylas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "express 4.xx example using Nylas Passport authentication strategy.",
   "main": "./server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
+    "debug": "nodemon --inspect server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/pcuci/nylas-express"
   },
   "keywords": [
     "passport",
@@ -23,19 +24,24 @@
     "email": "eseyinwale@gmail.com",
     "name": "Wale Eseyin"
   },
+  "contributors": [
+    "Paul Cuciureanu <paulcu@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "consolidate": "^0.14.1",
     "cookie-parser": "^1.4.3",
-    "dotenv": "2.0.0",
+    "dotenv": "4.0.0",
     "express": "^4.14.0",
+    "express-session": "1.15.5",
     "mongoose": "^4.5.1",
-    "passport": "^0.3.2",
+    "nylas": "^3.1.0",
+    "passport": "^0.4.0",
     "passport-nylas": "1.0.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "morgan": "1.7.0"
+    "morgan": "1.8.2"
   }
 }

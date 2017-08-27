@@ -9,7 +9,7 @@
 	<p><a href="auth/nylas">Login</a></p>
 {% else %}
 	<p>Welcome {{user.email }}</p>
-	<div> {{ thread }} </div>
+	<div> {{ thread.snippet }} </div>
 
 {% endif %}
 {% endblock %}

@@ -2,8 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-const engines = require('consolidate')
-const swig = require('swig')
 const session = require('express-session')
 const request = require('request')
 
@@ -34,8 +32,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(logger('dev'))
 
-app.engine('html', engines.swig)
-app.set('view engine', 'html')
+app.set('view engine', 'pug')
 app.set('views', __dirname + '/views')
 app.use(express.static(__dirname + '/public'))
 

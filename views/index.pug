@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Nylas Express
+  p= message
+  if !user
+    a(href='auth/nylas') Login
+  else 
+    p Welcome #{user.email}
+    p= thread.snippet
